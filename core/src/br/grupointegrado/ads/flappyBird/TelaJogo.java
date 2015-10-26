@@ -35,7 +35,7 @@ public class TelaJogo extends TelaBase {
 
         initChao();
         initPassaro();
-
+        new Obstaculo(mundo, camera, null);
     }
 
     private void initChao() {
@@ -99,10 +99,10 @@ public class TelaJogo extends TelaBase {
      * Atualiza a posição do chão para acompanhar o passaro
      */
     private void atualizarChao() {
-        float largura = camera.viewportWidth / Util.PIXEL_METRO;
-        Vector2 posicao = chao.getPosition();
-        posicao.x = largura / 2;
-        chao.setTransform(posicao, 0);
+        Vector2 posicao = passaro.getCorpo().getPosition();
+
+        chao.setTransform(posicao.x, 0, 0);
+
     }
 
     @Override
