@@ -91,7 +91,7 @@ public class TelaJogo extends TelaBase {
      * @param fixtureB
      */
     private void detectarColisao(Fixture fixtureA, Fixture fixtureB) {
-        if ("PASSARO".equals(fixtureA.getUserData()) || "PASSARO".equals(fixtureB.getUserData()))){
+        if ("PASSARO".equals(fixtureA.getUserData()) || ("PASSARO".equals(fixtureB.getUserData()))){
             // game over
             gameOver = true;
         }
